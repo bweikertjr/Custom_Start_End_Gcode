@@ -11,11 +11,11 @@ M190 S[first_layer_bed_temperature]     ; wait for bed temp
 M109 S{first_layer_temperature[0]-8}    ; wait for extruder temp
 M104 S[first_layer_temperature]         ; set extruder temp
 G1 Z2 F240                              ; move z close to bed
-G1 X215 Y10 F3000                         ; move x y position for intro line print
+G1 X220 Y10 F3000                         ; move x y position for intro line print
 G1 Z[first_layer_height] F240           ; move z to first layer height
 G92 E0                                  ; set current position extruder 0
 G1 Y190 E15 F1500                       ; intro line
-G1 X215.3 F5000                           ; intro line
+G1 X220.3 F5000                         ; intro line
 G92 E0                                  ; intro line
 G1 Y10 E15 F1200                        ; intro line
 G92 E0                                  ; set current position extruder 0

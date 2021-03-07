@@ -12,23 +12,19 @@ G28                             ; home all
 
 ;Begin probing routine
 G1 Z2 F240
-G1 X25 Y25 F3000
+G1 X190 Y195 F3000
 G1 Z0 F240
 M0
 G1 Z2 F240
-G1 X195 Y25 F3000
+G1 X20 Y195 F3000
 G1 Z0 F240
 M0
 G1 Z2 F240
-G1 X195 Y195 F3000
+G1 X190 Y20 F3000
 G1 Z0 F240
 M0
 G1 Z2 F240
-G1 X25 Y195 F3000
-G1 Z0 F240
-M0
-G1 Z2 F240
-G1 X115 Y111.5 F3000
+G1 X20 Y25 F3000
 G1 Z0 F240
 M0
 G1 Z5 F240
@@ -44,11 +40,12 @@ M140 S[first_layer_bed_temperature] ; set bed temp
 M190 S[first_layer_bed_temperature] ; wait for bed temp
 M109 S[first_layer_temperature]     ; wait for extruder temp
 
-G1 X2 Y10 F3000
-G1 Z0.28 F240
+G1 X215 Y10 F3000
+G1 Z0.34 F240
 G92 E0
 G1 Y190 E15 F1500                   ; intro line
-G1 X2.3 F5000
+G1 X215.3 F3000
 G92 E0
 G1 Y10 E15 F1200                    ; intro line
 G92 E0
+M400
